@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #FFD700 50%, white 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form {
+  margin-top: 20px;
+}/*# sourceMappingURL=style.css.map */
