@@ -1,4 +1,4 @@
-$main_color: #FFD700;
+$main_color: rgba(245,158,11);;
 
 body {
     margin: 0;
@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 main {
@@ -21,4 +22,14 @@ main {
 
 form {
     margin-top: 20px;
+}
+
+.error-span {
+    display:block;
+    height:1em;
+}
+
+.input-mod {
+    padding: 0.5rem;
+    border: 1px solid transparent;
 }

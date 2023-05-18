@@ -34,6 +34,7 @@ function validateForm(e) {
     if (password !== confirmPassword) {
         e.preventDefault(); // Prevent form submission
         confirmPasswordError.textContent = "Passwords don't match"
+        confirmPasswordInput.classList.add('border-red-500')
     }
 
     if (incompleteFields.length > 0) {
@@ -61,8 +62,10 @@ function validateZipCode() {
 
     if (zipCodePattern.test(zipCode)) {
         zipError.textContent = ''; // Clear the error message
+        zipInput.classList.remove('border-red-500');
     } else {
         zipError.textContent = 'Please enter a valid ZIP code';
+        zipInput.classList.add('border-red-500');
     }
 }
 
@@ -145,13 +148,17 @@ function validatePassword() {
 
     if (password.length < 6) {
         passwordError.textContent = 'Password should be at least 6 characters long'
+        passwordInput.classList.add('border-red-500');
     } else if (!/\d/.test(password)) {
         passwordError.textContent = 'Password should contain at least one number'
+        passwordInput.classList.add('border-red-500');
     } else {
         passwordError.textContent = ''
+        passwordInput.classList.remove('border-red-500');
     }
 
     if (password === confirmPassword) {
         confirmPasswordError.textContent = ""
+        confirmPasswordInput.classList.remove('border-red-500');
     }
 }
